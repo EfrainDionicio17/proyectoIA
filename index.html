@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Encuentra tu Match</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="iaCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="splashScreen">
+        <div class="intro">
+
+            <h4>Encuentra tu Match</h4>
+            <h3>Búsqueda de amistad aplicando Lógica Difusa</h3>
+            <p>¡Introduce los datos de acuerdo a tus gustos y personalidad para buscarte una persona ideal en el sistema! </p>
+            <p>Creadores: <br> Efraín de Jesús Dionicio Martínez <br> Jesús Daniel Navarro Hernández <br> Víctor Gerardo Ramírez González </p>
+            <button id="startButton" class = "boton">Empezar</button>
+        </div>
+      </div>
+
+    <section style = "display: none;" id = "contenido">
+        <!-- sección inicio del formulario -->
+        <form class="form_data" id="myForm">
+            <!-- Título de nuestro formulario  -->
+            <h4>Encuentra tu Match</h4>
+            <!-- pregunta tipo radio  -->
+            <h3>Selecciona tu rango de edad:</h3>
+            <!-- la clase cuadrado es usada en el css para dar formato a la pregunta -->
+            <div class="cuadro">
+                <!-- Opciones de la pregunta definidas con un valor de 0.25 a 1 -->
+                <input type="radio" id="opcion1" name="pregunta1" value="0.25" checked="checked">
+                <label for="opcion1">16-18</label><br>
+                <input type="radio" id="opcion2" name="pregunta1" value="0.5">
+                <label for="opcion2">19-21</label><br>
+                <input type="radio" id="opcion3" name="pregunta1" value="0.75">
+                <label for="opcion3">22-25</label><br>
+                <input type="radio" id="opcion4" name="pregunta1" value="1">
+                <label for="opcion4">26-29</label><br>
+
+            </div>
+
+            <!-- pregunta tipo radio  -->
+            <h3>¿Cuál es tu ocupación?</h3>
+            <!-- la clase cuadrado es usada en el css para dar formato a la pregunta -->
+            <div class="cuadro">
+                <!-- Opciones de la pregunta definidas con un valor de 0.33 a 1 -->
+                <input type="radio" id="opcion1_2" name="pregunta2" value="0.33" checked="checked">
+                <label for="opcion1_2">Estudiante</label><br>
+                <input type="radio" id="opcion2_2" name="pregunta2" value="0.66">
+                <label for="opcion2_2">Trabajador</label><br>
+                <input type="radio" id="opcion3_2" name="pregunta2" value="1">
+                <label for="opcion3_2">Desempleado</label><br>
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Como te consideras a ti mismo?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq"><img src="img/intro.png" title="Introvertido"></div>
+                    <input type="range" id="opcion3_1" name="pregunta3" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der"><img src="img/personas.png" title="Extrovertido"></div>
+                </div>
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué nivel de importancia tiene la familia para ti?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->
+                <div class="field">
+                    <!-- elementos a seccionar  -->                    
+                    <div class="value_izq">Nulo</div>
+                    <input type="range" id="opcion4_1" name="pregunta4" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Alto</div>
+                </div>
+
+            </div>
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué nivel de importancia tienen los amigos para ti?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nulo</div>
+                    <input type="range" id="opcion5_1" name="pregunta5" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Alto</div>
+                </div>
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué nivel de importancia tiene el trabajo/estudio para ti?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nulo</div>
+                    <input type="range" id="opcion6_1" name="pregunta6" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Alto</div>
+                </div>
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué tanto te gusta hacer deporte?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nada</div>
+                    <input type="range" id="opcion7_1" name="pregunta7" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Mucho</div>
+                </div>
+
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué tanto te gusta viajar?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nada</div>
+                    <input type="range" id="opcion8_1" name="pregunta8" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Mucho</div>
+                </div>
+
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué tanto te gusta leer?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nada</div>
+                    <input type="range" id="opcion9_1" name="pregunta9" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Mucho</div>
+                </div>
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué tanto te gustan los videojuegos?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nada</div>
+                    <input type="range" id="opcion10_1" name="pregunta10" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Mucho</div>
+                </div>
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué tanto te gusta el cine?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nada</div>
+                    <input type="range" id="opcion11_1" name="pregunta11" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Mucho</div>
+                </div>
+
+            </div>
+
+            <!-- pregunta tipo radio  -->
+            <h3>¿Cuál es tu música preferida?</h3>
+            <!-- la clase cuadrado es usada en el css para dar formato a la pregunta -->
+            <div class="cuadro">
+                <!-- Opciones de la pregunta definidas con un valor de 0.1 a 1 -->
+                <input type="radio" id="opcion12_1" name="pregunta12" value="0.1" checked="checked">
+                <label for="opcion12_1">Rock</label><br>
+                <input type="radio" id="opcion12_2" name="pregunta12" value="0.2">
+                <label for="opcion12_2">Reggaeton</label><br>
+                <input type="radio" id="opcion12_3" name="pregunta12" value="0.3">
+                <label for="opcion12_3">Banda</label><br>
+                <input type="radio" id="opcion12_4" name="pregunta12" value="0.4">
+                <label for="opcion12_4">Pop</label><br>
+                <input type="radio" id="opcion12_5" name="pregunta12" value="0.5">
+                <label for="opcion12_5">Rap</label><br>
+                <input type="radio" id="opcion12_6" name="pregunta12" value="0.6">
+                <label for="opcion12_6">Indie</label><br>
+                <input type="radio" id="opcion12_7" name="pregunta12" value="0.7">
+                <label for="opcion12_7">Metal</label><br>
+                <input type="radio" id="opcion12_8" name="pregunta12" value="0.8">
+                <label for="opcion12_8">Clásica</label><br>
+                <input type="radio" id="opcion12_9" name="pregunta12" value="0.9">
+                <label for="opcion12_9">Alternativa</label><br>
+                <input type="radio" id="opcion12_10" name="pregunta12" value="1">
+                <label for="opcion12_10">Instrumental</label><br>
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué tanto te gustan los animales?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq">Nada</div>
+                    <input type="range" id="opcion13_1" name="pregunta13" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der">Mucho</div>
+                </div>
+
+            </div>
+
+             <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué horario para dormir usas?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq"><img src="img/salida-del-sol.png" alt="mañana"> </div>
+                    <input type="range" id="opcion14_1" name="pregunta14" list="markers2" min="0.33" max=".99"
+                        step="0.33" value="0.33"><br><br>
+                    <div class="value_der"><img src="img/noche.png" alt="noche"></div>
+                </div>
+
+            </div>
+
+            <!-- pregunta tipo barra deslizante -->
+            <h3>¿Qué tanto te gusta el frío o calor?</h3>
+            <!-- div que nos ayuda a estilizar las preguntas -->            
+            <div class="range">
+                <!-- div que nos ayuda a seccionar los elementos -->            
+                <div class="field">
+                    <!-- elementos a seccionar  -->
+                    <div class="value_izq"> <img src="img/h.png" alt="Frio"></div>
+                    <input type="range" id="opcion15_1" name="pregunta15" list="markers" min="0.25" max="1" step="0.25"
+                        value="0.25"><br><br>
+                    <div class="value_der"><img src="img/c.png" alt="Calor"></div>
+                </div>
+
+            </div>
+
+            <!-- boton enviar formulario -->
+            <input type="submit" id="enviar" value="Consultar match">
+
+            <h4 style="font-size: 26px;" id="displayMatch"></h4>
+        </form>
+
+        <!-- secciones que usan las opciones para visualizacion web -->
+    </section>
+    <datalist id="markers">
+        <option value="0.25"></option>
+        <option value="0.5"></option>
+        <option value="0.75"></option>
+        <option value="1"></option>
+    </datalist>
+
+    <datalist id="markers2">
+        <option value="0.33"></option>
+        <option value="0.66"></option>
+        <option value="0.99"></option>
+    </datalist>
+
+
+<!---------------- Scripts -------------------------->
+
+
+    <!-- scripts que se usan para la logica -->
+    <script>
+
+        const splashScreen = document.getElementById('splashScreen');
+        const contenido = document.getElementById('contenido');
+        const startButton = document.getElementById('startButton');
+        const displayMatch = document.getElementById('displayMatch');
+
+        contenido.style.display = 'none';
+        displayMatch.style.display = 'none';
+
+
+        startButton.addEventListener('click', function () {
+            splashScreen.style.display = 'none';
+            contenido.style.display = 'block';
+        });
+
+        $(document).ready(function () {
+            $('#enviar').click(function () {
+
+                event.preventDefault();
+
+                //Carga de datos de campo en un objeto de arreglo bidimensional, comentados los nombres a que corresponden su resultado.
+                let campoDatos = [
+
+                        /*Luis*/[0.2, 0.44, 0.64, 0.85, 0.09, 0.09, 0.53, 0.21, 0.69, 0.55, 0.54, 0.73, 0.82, 0.91, 0.59],
+                        /*Andrea*/[0.88, 0.13, 0.32, 1, 0.14, 0.53, 0.47, 0.05, 0.2, 0.82, 0.85, 0.65, 0.66, 0.68, 0.62],
+                        /*María*/[0.61, 0.97, 0.16, 0.56, 0.36, 0.05, 0.72, 0.46, 0.35, 0.58, 0.47, 0.86, 0.68, 0.01, 0.43],
+                        /*Lucía*/[0.15, 0.82, 0.62, 0.59, 0.26, 0.64, 0.24, 0.69, 0.06, 0.78, 0.9, 0.99, 0.65, 0.94, 0.79],
+                        /*Jesús*/[0.08, 0.82, 0.18, 0.55, 0.35, 0.32, 0.81, 0.81, 0.83, 0.13, 0.6, 0.88, 0.98, 0.91, 0.45],
+                        /*Jesús*/[0.82, 0.07, 0.62, 0.71, 0.29, 0.91, 0.78, 0.28, 0.4, 0.11, 0.19, 0.54, 0.31, 0.95, 0.34],
+                        /*Napoleón*/[0.24, 0.86, 0.69, 0.45, 0.15, 0.76, 0.63, 0.09, 0.42, 0.01, 0.79, 0.86, 0.52, 0.35, 0.95],
+                        /*Christian*/[0.69, 0.47, 0.16, 0.71, 0.85, 0.06, 0.15, 0.34, 0.73, 0.76, 0.28, 0.79, 0.46, 0.56, 0.53],
+                        /*José*/[0.98, 0.68, 0.42, 0.54, 0.37, 0.59, 0.26, 0.2, 0.49, 0.34, 0.49, 0.29, 0.73, 0.68, 0.98],
+                        /*Judas*/[0.37, 0.94, 0.57, 0.83, 0.23, 0.85, 0.64, 0.51, 0.44, 0.58, 0.05, 0.88, 0.09, 0.74, 0.33],
+                        /*Rogelio*/[0.91, 0.35, 0.45, 0.71, 0.12, 0.75, 0.88, 0.8, 0.56, 0.61, 0.04, 0.36, 0.82, 0.57, 0.94],
+                        /*Miguel*/[0.48, 0.82, 0.53, 0.19, 0.07, 0.52, 0.74, 0.91, 0.2, 0.09, 0.48, 0.5, 0.7, 0.4, 0.63],
+                        /*Alonso*/[0.29, 0.98, 1, 0.75, 0.3, 0.63, 0.82, 0.91, 0.96, 0.61, 0.39, 0.11, 0.84, 0.39, 0.19],
+                        /*Ramón*/[0.48, 0.94, 0.64, 0.02, 0.14, 0.11, 0.01, 0.16, 0.45, 0.57, 0.28, 0.54, 0.42, 0.85, 0.95],
+                        /*Salma*/[0.05, 0.95, 0.6, 0.66, 0.4, 0.48, 0.31, 0.5, 0.53, 0.79, 0.66, 0.51, 0.49, 0.77, 0.4],
+                        /*Julian*/[0.23, 0.42, 0.59, 1.00, 0.72, 0.81, 0.05, 0.97, 0.69, 0.09, 0.38, 0.12, 0.65, 0.87, 0.97],
+                        /*Pedro*/[0.02, 0.3, 0.28, 0.46, 0.95, 0.02, 0.74, 0.79, 0.37, 0.56, 0.13, 0.77, 0.60, 0.74, 0.85],
+                        /*Mario*/[0.91, 0.18, 0.03, 0.50, 0.76, 0.74, 0.19, 0.05, 0.50, 0.85, 0.17, 0.12, 0.37, 0.98, 0.31],
+                        /*Alejandro*/[0.3, 0.85, 0.83, 0.04, 0.68, 0.31, 0.15, 0.60, 0.08, 0.03, 0.76, 0.83, 0.75, 0.01, 0.35],
+                        /*Beatriz*/[0.82, 0.70, 0.52, 0.64, 0.20, 0.14, 0.15, 0.57, 0.76, 0.08, 0.67, 0.90, 0.28, 0.49, 0.27],
+
+                ];
+
+                //Arreglo correspondiente a los nombres que están en el campo de datos.
+                let nombres = ["Luis", "Andrea", "María", "Lucía", "Rodrigo",
+                    "Jesús", "Napoleón", "Christian", "José", "Judas",
+                    "Rogelio", "Miguel", "Alonso", "Ramón", "Salma",
+                    "Julian", "Pedro", "Mario", "Alejandro", "Beatriz"];
+
+                //Recuperación de valores de formulario y conversión a flotante para comparación.
+                var form = new FormData(document.getElementById("myForm"));
+                var value1 = parseFloat(form.get("pregunta1"))
+                var value2 = parseFloat(form.get("pregunta2"))
+                var value3 = parseFloat(form.get("pregunta3"))
+                var value4 = parseFloat(form.get("pregunta4"))
+                var value5 = parseFloat(form.get("pregunta5"))
+                var value6 = parseFloat(form.get("pregunta6"))
+                var value7 = parseFloat(form.get("pregunta7"))
+                var value8 = parseFloat(form.get("pregunta8"))
+                var value9 = parseFloat(form.get("pregunta9"));
+                var value10 = parseFloat(form.get("pregunta10"))
+                var value11 = parseFloat(form.get("pregunta11"))
+                var value12 = parseFloat(form.get("pregunta12"))
+                var value13 = parseFloat(form.get("pregunta13"))
+                var value14 = parseFloat(form.get("pregunta14"))
+                var value15 = parseFloat(form.get("pregunta15"))
+
+                let entrada = [value1, value2, value3, value4, value5, value6, value7, value8,
+                    value9, value10, value11, value12, value13, value14, value15];
+
+                //Creación de arreglo vacío para guardar los resultados de cada persona.
+                let resultados = [];
+
+                //Ciclo padre donde recorremos los resultados de cada persona (fila por fila)
+                for (var i = 0; i < 20; i++) {
+
+                    //Variable temporal donde se van guardando los resultados de cada persona.
+                    var total = 0;
+
+                    //Ciclo hijo donde recorremos cada valor del resultado de cada persona en el banco de datos.
+                    for (var j = 0; j < 15; j++) {
+
+                        //Comparación para revisar si el resultado del campo de datos es menor al de la entrada del usuario.
+                        if (campoDatos[i][j] >= entrada[j]) {
+
+                            total += entrada[j];
+
+                        } else {
+
+                            total += campoDatos[i][j];
+
+                        }
+
+                    }
+
+                    //Se agrega el total al arreglo de resultados, al final del ciclo habría 20 resultados.
+                    resultados.push(total);
+
+                };
+
+                //Se crean las variables donde se guardarán el resultado mayor junto con el índice donde se encuentran.
+                var greatest = 0;
+                var indexOfGreatest;
+
+                //Ciclo para determinar el mayor valor y su índice en el arreglo de resultados.
+                for (var i = 0; i < resultados.length; i++) {
+                    if (resultados[i] > greatest) {
+                        greatest = resultados[i];
+                        indexOfGreatest = i;
+                    }
+                }
+
+                //Validación con umbral de 5 en el resultado final
+                var mejorMatch;
+
+                if (greatest < 5) {
+
+                    mejorMatch = "No hay compatibilidad en el banco de datos."
+
+                } else {
+
+                    mejorMatch = nombres[indexOfGreatest]
+
+                }
+                displayMatch.textContent = "";
+                displayMatch.textContent = "Tu mejor match: ";
+                displayMatch.textContent += mejorMatch;
+                displayMatch.style.display = 'block';
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+/* Estilo para el formulario */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: radial-gradient(circle at 50% -20.71%, #ffffa1 0, #f5ffa0 6.25%, #e4ffa0 12.5%,
+      #d2ffa1 18.75%, #bdffa3 25%, #a7fda6 31.25%, #8cfaaa 37.5%, #6cf7af 43.75%, #3cf2b5 50%, #00edbc 56.25%,
+      #00e8c6 62.5%, #00e4d0 68.75%, #00dfdc 75%, #00dbe9 81.25%, #00d7f5 87.5%, #00d3ff 93.75%, #00d0ff 100%);
+}
+
+#splashScreen {
+  background-image: radial-gradient(circle at 50% -20.71%, #ffffa1 0, #f5ffa0 6.25%, #e4ffa0 12.5%,
+      #d2ffa1 18.75%, #bdffa3 25%, #a7fda6 31.25%, #8cfaaa 37.5%, #6cf7af 43.75%, #3cf2b5 50%, #00edbc 56.25%,
+      #00e8c6 62.5%, #00e4d0 68.75%, #00dfdc 75%, #00dbe9 81.25%, #00d7f5 87.5%, #00d3ff 93.75%, #00d0ff 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.intro{
+  background: #375f61;/*3f8c91*/
+  color: white;
+  position: fixed;
+  font-family: 'poppins', sans-serif;
+  border-radius: 20px;
+  box-shadow: 7px 13px 37px #000;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.intro h3{
+  text-decoration:underline;
+}
+
+.form_data {
+  width: 800px;
+  background: #375f61;
+  /*#24303c;*/
+  padding: 30px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 10%;
+  border-radius: 6px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.cuadro {
+  width: 200px;
+
+}
+
+h4 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'calibri';
+}
+
+h3 {
+  height: 40px;
+  text-align: justify;
+  font-family: 'calibri';
+}
+
+p {
+  text-align: center;
+  font-size: 22px;
+  font-family: 'calibri';
+  width: 60%;
+  margin-bottom: 50px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.range .field {
+  display: flex;
+  align-items: center;
+  font-style: italic;
+
+}
+
+.value_izq,
+.value_der {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+input[type="radio"],
+input[type="range"] {
+  margin-bottom: 10px;
+}
+
+input[type="submit"], .boton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #337ab7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#displayMatch {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'calibri';
+
+}
+
+.boton:hover, input[type="submit"]:hover {
+  background-color: #23527c;
+}
+
+
+/* Ajustes de diseño para los elementos del formulario */
+label {
+  margin-left: 5px;
+  position: relative;
+  font-family: 'poppins', sans-serif;
+  font-size: 16px;
+  /* border: 2px solid #6cf7af; */
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+label:before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  border: 3px solid #6cf7af;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+input[type="radio"]:checked+label {
+  background-color: #6cf7af;
+  color: black;
+}
+
+input[type="radio"]:checked+label:before {
+  height: 6px;
+  width: 6px;
+  border: 5px solid black;
+  background-color: #6cf7af;
+
+}
+
+input[type="range"] {
+  width: 80%;
+}
